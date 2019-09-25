@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 euroAmount = Double.valueOf(euroString);
                 dollarAmount = getDollarAmount(euroAmount);
                 dollarAmountString = decimalFormat.format(dollarAmount);
-                displayDollarAmount(dollarAmount);
+                displayDollarAmount();
                 editText.setText("");
             }
         });
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         return dollarAmount;
     }
 
-    private void displayDollarAmount(double dollarAmount) {
+    private void displayDollarAmount() {
         euroAmountString = decimalFormat.format(euroAmount);
         Toast.makeText(this, euroAmountString + getString(R.string.toast_text) + " " + dollarAmountString + getString(R.string.dollar_text), Toast.LENGTH_LONG).show();
     }
