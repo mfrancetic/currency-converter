@@ -43,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayDollarAmount(double dollarAmount) {
-        Toast.makeText(this, euroAmount + getString(R.string.toast_text) + dollarAmount + getString(R.string.dollar_text), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, euroAmount + getString(R.string.toast_text) + " " + dollarAmount + getString(R.string.dollar_text), Toast.LENGTH_LONG).show();
     }
 }
