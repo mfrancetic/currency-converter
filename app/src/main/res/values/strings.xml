@@ -2,8 +2,8 @@
     <string name="app_name">CurrencyConverter</string>
     <string name="convert">Convert</string>
     <string name="currency_image_content_description">Money pig image</string>
-    <string name="currency_edit_text_hint">Amount to convert</string>
+    <string name="currency_edit_text_hint">EUR amount</string>
     <string name="toast_text">€ is</string>
     <string name="dollar_text">$</string>
-    <string name="convert_text">Enter the amount you want to convert</string>
+    <string name="convert_text">Enter the amount you want to convert to USD</string>
 </resources>
