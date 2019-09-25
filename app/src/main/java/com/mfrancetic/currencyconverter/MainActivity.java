@@ -8,15 +8,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     private double dollarAmount;
 
     private double euroAmount;
 
+    private String euroAmountString;
+
     private double currencyRate = 1.1;
 
     private String euroString;
+
+    private static DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +46,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private double getDollarAmount(double euroAmount) {
-        return euroAmount * currencyRate;
+        dollarAmount = euroAmount * currencyRate;
+        return dollarAmount;
     }
 
     private void displayDollarAmount(double dollarAmount) {
-        Toast.makeText(this, euroAmount + getString(R.string.toast_text) + " " + dollarAmount + getString(R.string.dollar_text), Toast.LENGTH_LONG).show();
+        euroAmountString = decimalFormat.format(euroAmount);
+        Toast.makeText(this, euroAmountString + getString(R.string.toast_text) + " " + decimalFormat.format(dollarAmount) + getString(R.string.dollar_text), Toast.LENGTH_LONG).show();
     }
 }
