@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 euroAmount = Double.valueOf(euroString);
                 dollarAmount = getDollarAmount(euroAmount);
                 displayDollarAmount(dollarAmount);
+                editText.setText("");
             }
         });
 
